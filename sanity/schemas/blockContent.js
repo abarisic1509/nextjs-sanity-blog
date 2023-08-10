@@ -8,7 +8,6 @@
  *    type: 'blockContent'
  *  }
  */
-
 const blockContent = {
 	title: "Block Content",
 	name: "blockContent",
@@ -71,5 +70,4 @@ const blockContent = {
 		},
 	],
 };
-
 export default blockContent;
