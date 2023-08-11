@@ -1,5 +1,5 @@
 export default function preview(req, res) {
 	res.setPreviewData({});
-	res.writeHead(307, { Location: "/studio/preview" });
+	res.writeHead(307, { Location: "/" });
 	res.end("Preview mode enabled");
 }

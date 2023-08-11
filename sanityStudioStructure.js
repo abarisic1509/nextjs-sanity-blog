@@ -9,7 +9,7 @@ export const defaultDocumentNode = (S, { schemaType }) => {
 				S.view
 					.component(Iframe)
 					.options({
-						url: "http://localhost:3000/studio/preview",
+						url: "http://localhost:3000/api/preview",
 					})
 					.title("Preview"),
 			]);

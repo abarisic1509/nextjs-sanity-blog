@@ -1,6 +1,7 @@
 import React from "react";
 import { groq } from "next-sanity";
 import { urlForImage } from "@/sanity/lib/image";
+import Link from "next/link";
 
 export const query = groq`
 *[_type=='post'] {
@@ -11,6 +12,7 @@ export const query = groq`
 `;
 
 const BlogpostList = ({ data }) => {
+	console.log(data);
 	return (
 		<div className="flex flex-wrap gap-4 max-w-7xl mx-auto p-6">
 			{data.map((item) => (
@@ -22,7 +24,9 @@ const BlogpostList = ({ data }) => {
 						src={urlForImage(item.mainImage).url()}
 						className="w-full h-40 object-cover"
 					/>
-					<h3>{item.title}</h3>
+					<h3>
+						<Link href={`/post/${item.slug.current}`}>{item.title}</Link>
+					</h3>
 					<p>{item.author.name}</p>
 				</article>
 			))}
