@@ -3,6 +3,7 @@ import { getClient } from "@/lib/sanity.client";
 import BlogpostList, { query } from "@/components/BlogpostList";
 import PreviewProvider from "@/components/PreviewProvider";
 import PreviewList from "@/components/PreviewList";
+import ContactForm from "@/components/ContactForm";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function Home({ preview, posts }) {
 	return (
 		<div>
 			<BlogpostList data={posts} />
+			<ContactForm />
 		</div>
 	);
 }
